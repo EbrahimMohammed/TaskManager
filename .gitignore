@@ -1,0 +1,47 @@
+# .NET
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.log
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Docker
+*.log
+Dockerfile.*
+.dockerignore
+
+# Node.js (if you're using any JS tools for the frontend or build)
+node_modules/
+
+# Azure settings
+.vscode/azure*
+.deploy/
+.settings/
+
+# Build directories
+bin/
+obj/
+out/
+
+# Mac specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# JetBrains Rider specific files
+.idea/
+
+# User-specific files
+*.suo
+*.user
