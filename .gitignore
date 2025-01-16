@@ -45,3 +45,6 @@ Thumbs.db
 # User-specific files
 *.suo
 *.user
+appsettings.json
+appsettings.Production.json
+appsettings.Development.json
