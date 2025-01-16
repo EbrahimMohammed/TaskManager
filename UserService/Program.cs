@@ -18,7 +18,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddRepositories();
 builder.Services.AddServices(builder.Configuration);
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 ////{
@@ -26,6 +25,11 @@ var app = builder.Build();
     app.UseSwaggerUI();
 //}
 Console.WriteLine("now swagger in prodcution");
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
 
 app.UseHttpsRedirection();
 
